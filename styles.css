@@ -1,0 +1,255 @@
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+main {
+    padding-top: 70px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.highlight {
+    color: #f1684d;     
+    font-weight: bold; }
+
+
+.threed-box {
+    perspective: 1000px;
+}
+
+.threed-content {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#home:hover .threed-content,
+#contact:hover .threed-content {
+    transform: rotateY(20deg);
+}
+
+.btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    margin-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.additional-details {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.skill-icon {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.skill-list li {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.skill-list li:nth-child(3n+1) {
+    clear: both;
+}
+
+.contact-linkedin {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.contact-linkedin:hover {
+    text-decoration: underline;
+}
+
+.contact-linkedin img {
+    width: 80px;
+    height: 50px;
+}
+
+#home {
+    background-color: #e2f7c5;
+}
+
+#about,
+#projects,
+#skills,
+#contact {
+    background-color: #e2f7c5;
+}
+
+#home:hover {
+    background-color: #9ae1bc;
+}
+
+#about:hover {
+    background-color: #a8f1ba;
+}
+
+#projects:hover {
+    background-color: #71ec9c;
+}
+
+#skills:hover {
+    background-color: #76d999;
+}
+
+#contact:hover {
+    background-color: #bbebc7;
+}
+
+header {
+    background-color: rgb(28, 226, 164);
+}
+
+header nav ul li a:hover {
+    color: #333;
+}
+
+section {
+    height: 100vh;
+    overflow-y: auto;
+}
+footer {
+    padding: 10px 0;
+    background-color: rgb(28, 226, 164);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .content {
+        padding: 0 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .skill-list li {
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .content {
+        padding: 0 10px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .threed-content {
+        padding: 15px;
+    }
+
+    .skill-list li {
+        width: 100%;
+    }
+}
